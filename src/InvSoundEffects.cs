@@ -33,9 +33,14 @@ namespace InvSoundEffects
             On.RainWorld.OnModsInit += RainWorld_OnModsInit;
         }
 
+        private bool isInit = false;
+
         private void RainWorld_OnModsInit(On.RainWorld.orig_OnModsInit orig, RainWorld self)
         {
             orig(self);
+
+            if (isInit) return;
+            isInit = true;
 
             MachineConnector.SetRegisteredOI(MOD_ID, Options.instance);
 

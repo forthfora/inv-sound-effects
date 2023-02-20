@@ -17,7 +17,7 @@ namespace InvSoundEffects
             "Whether all slugcats use Inv's death sounds.",
             null, "", "Death Sounds?"));
 
-        public static Configurable<bool> invImpactSound = instance.config.Bind("invImpactSound", true, new ConfigurableInfo(
+        public static Configurable<bool> invImpactSound = instance.config.Bind("invImpactSound", false, new ConfigurableInfo(
             "Whether all slugcats use Inv's impact sounds.",
             null, "", "Impact Sounds?"));
 
