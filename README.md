@@ -1,5 +1,22 @@
-Adds Inv's death and impact sfx to all campaigns!
-(thanks Andrew)
+## Adds Inv/Enot/Sofanthiel's death and impact sfx to all campaigns!
+**Configure both in the Remix Menu, impact is off by default**
 
-Configure both in the Remix Menu, impact is off by default
- 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+<sub>(thanks Andrew)</sub>
