@@ -1,0 +1,6 @@
+[h1]Adds Inv's death and impact sounds to all campaigns![/h1]
+ 
+[h1](Check the config to toggle them individually, impact is off by default)[/h1]
+
+[b][u]Source: https://github.com/forthbridge/inv-sound-effects[/u]
+Please report any issues over there, or alternatively, contact me on Discord! (forthbridge#0683)[/b]
