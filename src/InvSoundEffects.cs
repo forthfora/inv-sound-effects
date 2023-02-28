@@ -16,7 +16,7 @@ using System;
 
 namespace InvSoundEffects
 {
-    [BepInPlugin(MOD_ID + "." + AUTHOR, MOD_NAME, VERSION)]
+    [BepInPlugin(AUTHOR + "." + MOD_ID, MOD_NAME, VERSION)]
     internal class InvSoundEffects : BaseUnityPlugin
     {
         public static new ManualLogSource Logger { get; private set; } = null!;
