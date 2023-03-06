@@ -79,11 +79,11 @@ namespace InvSoundEffects
             InitializeMarginAndPos();
 
             AddNewLine();
-            AddTextLabel(InvSoundEffects.MOD_NAME, bigText: true);
+            AddTextLabel(Plugin.MOD_NAME, bigText: true);
             DrawTextLabels(ref Tabs[tabIndex]);
 
             AddNewLine(0.5f);
-            AddTextLabel("Version " + InvSoundEffects.VERSION, FLabelAlignment.Left);
+            AddTextLabel("Version " + Plugin.VERSION, FLabelAlignment.Left);
             AddTextLabel("by " + AUTHORS_NAME, FLabelAlignment.Right);
             DrawTextLabels(ref Tabs[tabIndex]);
 
