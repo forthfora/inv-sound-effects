@@ -2,7 +2,6 @@
 	"id": "invsoundeffects",
 	"name": "Inv Sound Effects",
 	"version": "1.0.0",
-	"target_game_version": "v1.9.06",
 	"authors": "forthbridge",
 	"description": "(check the configs to toggle the 2 available sound effects)",
 	"requirements": ["moreslugcats"],
