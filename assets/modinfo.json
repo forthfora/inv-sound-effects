@@ -1,9 +1,9 @@
 {
 	"id": "invsoundeffects",
 	"name": "Inv Sound Effects",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"authors": "forthbridge",
-	"description": "(check the configs to toggle the 2 available sound effects)",
+	"description": "(check the Remix config to toggle the 2 available sound effects)<LINE><LINE>Source: https://github.com/forthbridge/inv-sound-effects",
 	"requirements": ["moreslugcats"],
 	"requirements_names": ["More Slugcats Expansions"],
 	"tags": ["Cosmetics"],
