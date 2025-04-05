@@ -1,0 +1,17 @@
+{
+  "Title": "Inv Sound Effects",
+  "Description": "Check the Remix config to toggle the 2 available sound effects.",
+  "ID": "invsoundeffects",
+  "Version": "1.1.0",
+  "TargetGameVersion": "v1.9.06",
+  "Requirements": "moreslugcats",
+  "RequirementNames": "More Slugcats Expansions",
+  "Authors": "forthfora",
+  "Visibility": "Public",
+  "Tags": [
+    "Cosmetics"
+  ],
+  "WorkshopID": 2936381561,
+  "UploadFilesOnly": true,
+  "UploadThumbnail": false
+}

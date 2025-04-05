@@ -50,18 +50,16 @@ public static class SoundEffect_Hooks
     {
         var c = new ILCursor(il);
 
-        if (!c.TryGotoNext(MoveType.After,
-                x => x.MatchLdsfld<MoreSlugcatsEnums.SlugcatStatsName>(nameof(MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel)),
-                x => x.Match(OpCodes.Call)))
+        while (c.TryGotoNext(MoveType.After,
+                   x => x.MatchLdsfld<MoreSlugcatsEnums.SlugcatStatsName>(nameof(MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel)),
+                   x => x.Match(OpCodes.Call)))
         {
-            throw new Exception("Goto Failed");
+            c.EmitDelegate<Func<bool>>(() => ModOptions.InvImpactSound.Value);
+            c.Emit(OpCodes.Or);
+
+            c.Emit(OpCodes.Ldarg_0);
+            c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass != MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel || !ModOptions.DisableInvImpactSound.Value);
+            c.Emit(OpCodes.And);
         }
-
-        c.EmitDelegate<Func<bool>>(() => ModOptions.InvImpactSound.Value);
-        c.Emit(OpCodes.Or);
-
-        c.Emit(OpCodes.Ldarg_0);
-        c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass != MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel || !ModOptions.DisableInvImpactSound.Value);
-        c.Emit(OpCodes.And);
     }
 }
