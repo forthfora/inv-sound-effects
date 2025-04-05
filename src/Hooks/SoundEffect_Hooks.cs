@@ -11,7 +11,6 @@ public static class SoundEffect_Hooks
         try
         {
             IL.Player.Die += Player_Die;
-            IL.Player.TerrainImpact += Player_TerrainImpact;
         }
         catch (Exception e)
         {
@@ -43,7 +42,7 @@ public static class SoundEffect_Hooks
         c.Emit(OpCodes.Or);
 
         c.Emit(OpCodes.Ldarg_0);
-        c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass == MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel && !ModOptions.DisableInvDeathSound.Value);
+        c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass != MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel || !ModOptions.DisableInvDeathSound.Value);
         c.Emit(OpCodes.And);
     }
 
@@ -62,7 +61,7 @@ public static class SoundEffect_Hooks
         c.Emit(OpCodes.Or);
 
         c.Emit(OpCodes.Ldarg_0);
-        c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass == MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel && !ModOptions.DisableInvImpactSound.Value);
+        c.EmitDelegate<Func<Player, bool>>(self => self.SlugCatClass != MoreSlugcatsEnums.SlugcatStatsName.Sofanthiel || !ModOptions.DisableInvImpactSound.Value);
         c.Emit(OpCodes.And);
     }
 }

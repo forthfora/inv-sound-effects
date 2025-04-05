@@ -22,6 +22,17 @@ public static class Hooks
 
             IsInit = true;
 
+            var mod = ModManager.ActiveMods.FirstOrDefault(mod => mod.id == Plugin.MOD_ID);
+
+            if (mod is null)
+            {
+                throw new Exception("Could not find mod ID!");
+            }
+
+            Plugin.ModName = mod.name;
+            Plugin.Version = mod.version;
+            Plugin.Authors = mod.authors;
+
             ApplyHooks();
         }
         catch (Exception e)

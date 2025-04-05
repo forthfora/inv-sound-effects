@@ -22,11 +22,11 @@ public class ModOptions : OptionsTemplate
         "Whether all slugcats use Inv's impact sounds.",
         null, "", "Impact Sounds?"));
 
-    public static Configurable<bool> DisableInvDeathSound { get; } = Instance.config.Bind("invDeathSound", true, new ConfigurableInfo(
+    public static Configurable<bool> DisableInvDeathSound { get; } = Instance.config.Bind(nameof(DisableInvDeathSound), false, new ConfigurableInfo(
         "Whether the death sound is disabled for Inv only.",
         null, "", "Disable Inv Death Sounds?"));
 
-    public static Configurable<bool> DisableInvImpactSound { get; } = Instance.config.Bind("invImpactSound", false, new ConfigurableInfo(
+    public static Configurable<bool> DisableInvImpactSound { get; } = Instance.config.Bind(nameof(DisableInvImpactSound), false, new ConfigurableInfo(
         "Whether the impact sound is disabled for Inv only.",
         null, "", "Disable Inv Impact Sounds?"));
 
